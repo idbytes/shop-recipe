@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shop-recipe';
+  title = 'Recipe Shop';
+  displayRecipe = true;
+  displayShopping = false;
+
+  constructor(){
+
+  }
+
+  onNavigate(componentName: string){
+    if(componentName==="recipes"){
+      this.displayRecipe = true;
+      this.displayShopping = false;
+    }
+    else{
+      this.displayShopping = true;
+      this.displayRecipe = false;
+    }
+  }
 }
